@@ -1,0 +1,46 @@
+{python=packages)
+
+sudo apt update
+sudo apt install python2-minimal
+sudo python2 --version
+sudo python2 --version
+ls /usr/bin/python*
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 1
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 2
+sudo update-alternatives --config python
+python --version
+
+{curl}
+
+sudo apt update
+sudo apt install curl
+curl -O https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
+sudo python2 get-pip.py 
+
+{ssh}
+
+rm -rf vi .ssh/authorized_keys
+vi .ssh/authorized_keys
+
+(ssh-keygen)
+
+ssh-keyegen
+
+copy public file
+
+{ansible}
+
+sudo apt-get install software-properties-common
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt-get update
+sudo apt-get install -y ansible
+ansible --version
+
+ansible all -i /etc/ansible/hosts -m command -a 'free'
+
+ansible all -i /etc/ansible/hosts -m commond -a 'touch file1'
+
+ansible all -i /etc/ansible/hosts -m shell -a 'curl -fsSL https://get.docker.com -o get-docker
+
+ansible all -i /etc/ansible/hosts -m shell -a 'sh get-docker.sh'
+
